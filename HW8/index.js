@@ -1,18 +1,22 @@
 const userBirthDate = Number(prompt("What is your year of birth?"))
 const userCity = prompt("City where you were born")
 const userFavSport = prompt("What is your favourite sport?")
+const userSportQuestion = "Cool! Do you want to become";
 
+let userAge = 18
+let userTown = "Town"
+let userSport = "Sport"
 
 if (isNaN(userBirthDate)) {
     userAge = "Wrong number"
 } else if (userBirthDate === 0) {
     userAge = "It is a pity that you did not want to enter your year of birth"
 } else {
-    userAge = 2022 - userBirthDate
+    userAge = new Date().getFullYear() - userBirthDate;
 }
 
 
-if (userCity === null || userCity === "") {
+if (!userCity) {
     userTown = "It is a pity that you did not want to enter your city"
 } else {
     if (userCity === "Kyiv") {
@@ -27,17 +31,17 @@ if (userCity === null || userCity === "") {
 }
 
 
-if (userFavSport === null || userFavSport === "") {
+if (!userFavSport) {
     userSport = "It is a pity that you did not want to enter your favourite sport"
 } else {
     if (userFavSport === "Football") {
-        userSport = "Cool! Do you want to become Leo Messi?"
+        userSport = `${userSportQuestion} Leo Messi?`;
     } else if (userFavSport === "Tennis") {
-        userSport = "Cool! Do you want to become Novak Djokovic?"
+        userSport = `${userSportQuestion} Novak Djokovic?`;
     } else if (userFavSport === "Basketball") {
-        userSport = "Cool! Do you want to become Michael Jordan?"
+        userSport = `${userSportQuestion} Michael Jordan?`;
     } else {
-        userSport = `Cool! Do you want to become professional ${userFavSport} player?`
+        userSport = `${userSportQuestion} professional ${userFavSport} player?`;
     }
 }
 
