@@ -9,20 +9,15 @@ if (isNaN(firstNumber) || isNaN(secondNumber)) {
 } else {
   if (operator == "add") {
     result = firstNumber + secondNumber;
+    alert(firstNumber + "+" + secondNumber + "=" + result);
   } else if (operator == "sub") {
     result = firstNumber - secondNumber;
+    alert(firstNumber + "-" + secondNumber + "=" + result);
   } else if (operator == "mult") {
     result = firstNumber * secondNumber;
+    alert(firstNumber + "*" + secondNumber + "=" + result);
   } else if (operator == "div") {
     result = firstNumber / secondNumber;
-    }
-}
-if (operator == "add") {
-    alert(firstNumber + "+" + secondNumber + "=" + result);
-} else if (operator == "sub") {
-    alert(firstNumber + "-" + secondNumber + "=" + result);
-} else if (operator == "mult") {
-    alert(firstNumber + "*" + secondNumber + "=" + result);
-} else if (operator == "div") {
     alert(firstNumber + "/" + secondNumber + "=" + result);
+    }
 }
